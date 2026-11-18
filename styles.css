@@ -102,6 +102,107 @@ h1,h2,h3,p{margin-top:0}
 @media(max-width:1000px){.hero{grid-template-columns:1.12fr .88fr;gap:25px}.shell{width:min(1160px,calc(100% - 60px))}.hero h1{font-size:clamp(54px,6vw,75px)}.photo-frame{height:255px;width:286px}.portrait-area{min-height:365px}.experience-item{grid-template-columns:190px 1fr}}
 @media(max-width:720px){html{scroll-padding-top:68px}.shell{width:calc(100% - 40px)}.header-inner{height:68px}.site-nav{display:none;position:absolute;left:0;right:0;top:68px;background:var(--bg);padding:15px 20px 25px;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:17px}.site-nav.open{display:flex}.menu-button{display:block}.hero{grid-template-columns:1fr;gap:45px;padding:67px 0 67px;min-height:auto}.hero h1{font-size:clamp(54px,12vw,78px)}.hero-role{font-size:24px}.portrait-area{min-height:335px}.photo-frame{width:min(100% - 45px,286px);height:255px}.portrait-area:before{right:4%;bottom:12px}.photo-note{bottom:-25px;left:5%}.photo-index{top:6px;right:2%}.highlights{grid-template-columns:1fr}.highlight,.highlight:first-child{min-height:auto;padding:17px 0;border:0;gap:4px}.highlight:not(:last-child):after{height:1px;width:100%;top:auto;bottom:0;left:0;right:auto;background:#d1ded0}.highlight strong{font-size:16px}.highlight .highlight-label{font-size:9px}.section{padding:75px 0}.profile-section{grid-template-columns:1fr;gap:28px}.section-side{display:flex;align-items:center;gap:18px;padding:0}.section-side p{margin:0}.profile-body h2{font-size:clamp(35px,8vw,48px)}.profile-body>p:last-child{font-size:14px}.section-heading{display:block;margin-bottom:32px}.section-heading>p{margin-top:20px}.experience-item{grid-template-columns:1fr;gap:12px;padding:34px 0}.date-column{padding:0 0 0 18px}.timeline-dot{left:0;top:6px;width:6px;height:6px}.experience-item .date-column:after{display:none}.experience-content{padding-left:18px}.experience-content h3{font-size:23px}.learning-grid{grid-template-columns:1fr;gap:55px;padding-top:35px}.contact-section{padding:72px 0}.contact-inner{grid-template-columns:1fr;gap:35px}.contact-link strong{font-size:15px}.footer-inner{min-height:115px;flex-wrap:wrap;justify-content:space-between}.footer-inner>span{order:3;flex-basis:100%;margin-top:-20px}}
 @media(max-width:370px){.shell{width:calc(100% - 32px)}.hero h1{font-size:51px}.hero-links{gap:20px}.primary-link{padding:13px 16px;gap:15px}.photo-note{font-size:8px}}
+/* Mobile-first hero refinement: the person's name and portrait share the first viewport.
+   This override is screen-only so printed CV formatting remains unchanged. */
+@media screen and (max-width:720px){
+  .hero{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) clamp(108px,34vw,152px);
+    grid-template-areas:
+      "eyebrow eyebrow"
+      "name portrait"
+      "role role"
+      "lead lead"
+      "links links";
+    column-gap:14px;
+    row-gap:17px;
+    align-items:center;
+    min-height:0;
+    padding-top:36px;
+    padding-bottom:52px;
+  }
+  .hero-copy{display:contents}
+  .hero .eyebrow{
+    grid-area:eyebrow;
+    align-self:start;
+    margin:0 0 2px;
+    gap:9px;
+    font-size:clamp(9px,2.3vw,11px);
+    white-space:nowrap;
+  }
+  .hero .eyebrow-line{width:25px;flex:none}
+  .hero h1{
+    grid-area:name;
+    align-self:center;
+    min-width:0;
+    margin:0;
+    font-size:clamp(30px,8.9vw,53px);
+    line-height:1.08;
+    letter-spacing:-.075em;
+  }
+  .hero h1 > span{white-space:nowrap}
+  .portrait-area{
+    grid-area:portrait;
+    min-width:0;
+    min-height:0;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:0;
+  }
+  .portrait-area::before,.photo-note,.photo-index{display:none}
+  .photo-frame{
+    width:100%;
+    max-width:152px;
+    height:auto;
+    aspect-ratio:1/1;
+    overflow:hidden;
+    border-radius:50% 50% 11px 11px;
+    box-shadow:0 8px 25px rgba(24,35,28,.10);
+  }
+  .photo-frame img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center 44%;
+  }
+  .hero-role{
+    grid-area:role;
+    margin:0;
+    font-size:clamp(19px,5.2vw,26px);
+    line-height:1.4;
+  }
+  .hero-lead{
+    grid-area:lead;
+    max-width:570px;
+    margin:0;
+    font-size:clamp(12.5px,3.3vw,15px);
+    line-height:1.7;
+  }
+  .hero-links{
+    grid-area:links;
+    margin:5px 0 0;
+    gap:18px;
+    align-items:center;
+  }
+  .primary-link{
+    padding:13px 16px;
+    gap:15px;
+    font-size:12px;
+    white-space:nowrap;
+  }
+  .text-link{font-size:12px;white-space:nowrap}
+}
+@media screen and (max-width:370px){
+  .hero{column-gap:11px;row-gap:15px;padding-top:31px;padding-bottom:43px}
+  .hero h1{font-size:clamp(27px,8.6vw,32px)}
+  .hero-links{gap:12px}
+  .primary-link{padding:12px 12px;gap:10px;font-size:11px}
+  .text-link{font-size:11px}
+}
+
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 @page{size:A4;margin:13mm}
 @media print{body{background:white;color:black}.site-header,.hero-links,.photo-note,.photo-index,.highlights-wrap,.print-link,.site-footer{display:none!important}.shell{width:100%}.hero{min-height:auto;grid-template-columns:1fr 155px;padding:0 0 14mm;gap:15mm}.hero h1{font-size:43px;margin:10px 0}.hero-role{font-size:16px;margin:0 0 8px}.hero-lead{font-size:11px;line-height:1.45}.portrait-area{min-height:auto}.portrait-area:before{display:none}.photo-frame{width:150px;height:160px;border-radius:90px 90px 3px 3px}.section{padding:9mm 0}.profile-section{grid-template-columns:1fr;gap:5mm}.profile-body h2{font-size:23px;margin:5mm 0}.profile-body>p:last-child{font-size:10px;line-height:1.5}.section-heading{margin-bottom:4mm}.section-heading h2{font-size:24px;margin:4mm 0 0}.section-heading>p,.section-side,.small-caps{display:none}.experience-item{grid-template-columns:110px 1fr;gap:7mm;padding:4mm 0;break-inside:avoid}.experience-content h3{font-size:14px;margin:0 0 3mm}.experience-content ul{gap:1mm}.experience-content li{font-size:9px;line-height:1.35}.org{font-size:10px;margin-bottom:2mm}.date-column{font-size:9px}.date-column:after,.timeline-dot{display:none!important}.learning-grid{padding:4mm 0}.learning-main h3{font-size:17px;margin:3mm 0}.learning-secondary .skills-list li,.languages>div{font-size:10px;padding:1.6mm 0}.contact-section{background:white;padding:5mm 0;border-top:1px solid #aaa}.contact-inner{grid-template-columns:1fr 1fr}.contact-head h2{font-size:22px;margin:2mm 0}.contact-head>p:last-child{font-size:10px}.contact-link{padding:3mm 0}.contact-link strong{font-size:10px}}
