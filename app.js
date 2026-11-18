@@ -55,7 +55,7 @@
     contact_heading: "Let's connect<span class=\"heading-period\">.</span>",
     contact_body: "If you would like to learn more about my professional experience, I would be happy to connect.",
     phone: "PHONE",
-    save_pdf: "Save this profile as PDF",
+    save_pdf: "Download original CV (PDF)",
     back_top: "Back to top ↑"
   };
   const translatable = [...document.querySelectorAll("[data-i18n]")];
@@ -89,6 +89,5 @@
   });
   nav?.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMenu));
   document.addEventListener("keydown", event => { if (event.key === "Escape") closeMenu(); });
-  document.getElementById("printButton")?.addEventListener("click", () => window.print());
   document.getElementById("year").textContent = String(new Date().getFullYear());
 })();
