@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#100b1e">
+  <meta name="description" content="Melisa · Portafolio digital. Una forma visual y contemporánea de presentar trayectoria, proyectos y perfil profesional.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:title" content="Melisa — Portafolio digital">
+  <meta property="og:description" content="Una historia profesional que merece contarse bien. Explora el portafolio digital de Melisa.">
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+  <title>Melisa — Portafolio digital</title>
+</head>
+<body>
+  <a class="skip" href="#contenido">Ir al contenido principal</a>
+  <div class="progress-track" aria-hidden="true"><div id="progress"></div></div>
+  <header class="header" id="inicio">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Melisa, regresar al inicio">
+        <span class="brand-symbol">m<span>·</span></span>
+        <span class="brand-type">Melisa <small>portafolio digital</small></span>
+      </a>
+      <button type="button" class="menu-button" id="menuButton" aria-label="Abrir menú" aria-controls="mainNav" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav" id="mainNav" aria-label="Menú principal">
+        <a href="#perfil">Sobre mí</a>
+        <a href="#trayectoria">Trayectoria</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a href="#perfil" class="header-cta">Explorar CV <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="live-dot"></span> PORTAFOLIO PERSONAL <span class="slash">/</span> EDICIÓN DIGITAL</p>
+          <h1 id="heroTitle">Hola, soy <em>Melisa<span class="period">.</span></em></h1>
+          <p class="hero-statement">Una historia profesional merece <span>contarse bien.</span></p>
+          <p class="hero-description">Un espacio creado para presentar mi trayectoria, las ideas que me mueven y el trabajo que me define. La información profesional se incorporará aquí después de validarla.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#perfil">Descubre mi perfil <span aria-hidden="true">↗</span></a>
+            <button class="button button-secondary" id="printHero" type="button">Guardar como PDF <span aria-hidden="true">↓</span></button>
+          </div>
+          <p class="hero-note"><span class="note-line"></span> DISEÑO VIVO. CONTENIDO EN PREPARACIÓN.</p>
+        </div>
+        <div class="hero-visual" role="img" aria-label="Escultura abstracta de líneas luminosas en forma de letra M, en tonos violeta, lavanda y azul">
+          <div class="visual-glow glow-a"></div><div class="visual-glow glow-b"></div>
+          <svg viewBox="0 0 700 650" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7a54ee"/><stop offset=".27" stop-color="#d6b7ff"/><stop offset=".54" stop-color="#7dd3ff"/><stop offset=".78" stop-color="#fd9ccc"/><stop offset="1" stop-color="#714bdd"/></linearGradient>
+              <linearGradient id="rim" x1="0" y1="0" x2=".9" y2="1"><stop offset="0" stop-color="#ffddfb" stop-opacity=".9"/><stop offset=".6" stop-color="#968aff" stop-opacity=".2"/><stop offset="1" stop-color="#b4c8ff" stop-opacity=".85"/></linearGradient>
+              <radialGradient id="bgfog"><stop offset="0" stop-color="#8b5cf6" stop-opacity=".45"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+              <filter id="blurGlow" x="-70%" y="-70%" width="240%" height="240%"><feGaussianBlur stdDeviation="21"/></filter>
+              <filter id="shadow"><feGaussianBlur stdDeviation="8"/></filter>
+            </defs>
+            <ellipse cx="362" cy="333" rx="320" ry="268" fill="url(#bgfog)"/>
+            <g opacity=".6" fill="none" stroke="#9985b9" stroke-width="1"><ellipse cx="341" cy="329" rx="260" ry="215" transform="rotate(-24 341 329)" stroke-dasharray="2 13"/><ellipse cx="350" cy="329" rx="205" ry="267" transform="rotate(30 350 329)" stroke-dasharray="1 10"/></g>
+            <path d="M91 457 C157 451 166 181 246 190 C314 199 301 423 371 417 C431 412 448 183 520 188 C577 192 606 441 646 444" stroke="#b99aff" stroke-width="72" stroke-linecap="round" opacity=".26" fill="none" filter="url(#blurGlow)"/>
+            <path d="M91 457 C157 451 166 181 246 190 C314 199 301 423 371 417 C431 412 448 183 520 188 C577 192 606 441 646 444" stroke="#0d0820" stroke-width="92" stroke-linecap="round" opacity=".7" fill="none" filter="url(#shadow)"/>
+            <path d="M91 457 C157 451 166 181 246 190 C314 199 301 423 371 417 C431 412 448 183 520 188 C577 192 606 441 646 444" stroke="url(#ribbon)" stroke-width="62" stroke-linecap="round" fill="none" opacity=".88"/>
+            <path d="M91 457 C157 451 166 181 246 190 C314 199 301 423 371 417 C431 412 448 183 520 188 C577 192 606 441 646 444" stroke="url(#rim)" stroke-width="28" stroke-linecap="round" fill="none" opacity=".88"/>
+            <path d="M94 449 C161 447 178 174 245 182 C321 196 311 416 369 411 C425 407 449 174 521 178 C586 185 606 432 647 434" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none" opacity=".65"/>
+            <g fill="#fff" opacity=".8"><circle cx="170" cy="116" r="2.3"/><circle cx="598" cy="123" r="2"/><circle cx="72" cy="297" r="1.6"/><circle cx="460" cy="549" r="2"/><circle cx="645" cy="295" r="1.8"/></g>
+          </svg>
+          <div class="visual-stamp stamp-top"><span class="stamp-star">✳</span><span>YOUR STORY<br><strong>MATTERS</strong></span></div>
+          <div class="visual-stamp stamp-bottom"><span class="mini-graph">✦</span> <span>01 / NUEVO CAPÍTULO</span></div>
+          <div class="visual-label">MELISA / DIGITAL IDENTITY / 2026</div>
+        </div>
+      </div>
+      <div class="hero-marquee" aria-label="Ideas, trayectoria y evolución"><div class="marquee-inner">CREATIVIDAD <span>✳</span> TRAYECTORIA <span>✳</span> PROYECTOS <span>✳</span> EVOLUCIÓN <span>✳</span> CREATIVIDAD <span>✳</span> TRAYECTORIA <span>✳</span> PROYECTOS <span>✳</span> EVOLUCIÓN <span>✳</span></div></div>
+    </section>
+
+    <section class="section about-section" id="perfil" aria-labelledby="perfilTitle">
+      <div class="container about-grid">
+        <div class="section-marker"><span class="section-number">01 / 04</span><span class="section-marker-line"></span><span>EL PERFIL</span></div>
+        <div class="about-main reveal">
+          <p class="kicker">MUCHO MÁS QUE UNA HOJA DE VIDA</p>
+          <h2 id="perfilTitle">La persona <em>detrás</em> del perfil.</h2>
+          <p class="about-lead">Este espacio está diseñado para que lo importante se entienda en segundos: quién soy, qué he hecho y hacia dónde quiero ir.</p>
+          <p class="body-copy">La presentación está lista, pero el contenido todavía necesita la información real de Melisa. No se han añadido profesiones, puestos, estudios ni logros que no estén confirmados.</p>
+          <div class="pending-note"><span class="pending-dot"></span><div><strong>Información en preparación</strong><span>Resumen profesional y especialidad pendientes de revisión.</span></div></div>
+        </div>
+        <div class="about-card reveal">
+          <div class="about-card-top"><span>PERFIL / 001</span><span>✳</span></div>
+          <span class="about-letter">M</span>
+          <p>Una identidad profesional.<br><em>Muchas posibilidades.</em></p>
+          <div class="about-card-bottom"><span>EDICIÓN PERSONAL</span><span>↗</span></div>
+        </div>
+      </div>
+      <div class="container pillars-grid" aria-label="Secciones del currículum">
+        <div class="pillar reveal"><span class="pillar-icon">01 <b>↗</b></span><h3>Experiencia</h3><p>Trayectoria, responsabilidades y contribuciones concretas.</p></div>
+        <div class="pillar reveal"><span class="pillar-icon">02 <b>◇</b></span><h3>Conocimientos</h3><p>Competencias y herramientas respaldadas por experiencia real.</p></div>
+        <div class="pillar reveal"><span class="pillar-icon">03 <b>✦</b></span><h3>Resultados</h3><p>Logros documentados, con contexto y evidencia cuando exista.</p></div>
+      </div>
+    </section>
+
+    <section class="section career-section" id="trayectoria" aria-labelledby="careerTitle">
+      <div class="container">
+        <div class="section-heading reveal"><div><p class="section-number">02 / 04 — TRAYECTORIA</p><h2 id="careerTitle">Cada etapa <em>cuenta.</em></h2></div><p>La experiencia no es solo una lista de fechas. Aquí podrá entenderse la evolución profesional de Melisa, una vez confirmada su información.</p></div>
+        <div class="career-grid">
+          <div class="timeline" aria-label="Cronología profesional en preparación">
+            <div class="timeline-row reveal"><div class="timeline-symbol">✧</div><div class="timeline-item"><span class="subtle-label">EXPERIENCIA PROFESIONAL</span><h3>Trayectoria laboral</h3><p>Pendiente de incorporar cargos, organizaciones, periodos y principales responsabilidades.</p><span class="state-chip">Por completar</span></div></div>
+            <div class="timeline-row reveal"><div class="timeline-symbol">◇</div><div class="timeline-item"><span class="subtle-label">FORMACIÓN</span><h3>Educación académica</h3><p>Pendiente de incorporar instituciones, estudios y fechas que Melisa desee hacer públicas.</p><span class="state-chip">Por completar</span></div></div>
+            <div class="timeline-row reveal"><div class="timeline-symbol">✳</div><div class="timeline-item"><span class="subtle-label">DESARROLLO CONTINUO</span><h3>Cursos y certificaciones</h3><p>Espacio reservado para formación adicional verificable y relevante para sus objetivos.</p><span class="state-chip">Por completar</span></div></div>
+          </div>
+          <aside class="career-aside reveal"><span class="aside-eyebrow">ÁREAS POR DOCUMENTAR</span><h3>Lo que hace único a un perfil no se inventa.</h3><div class="skill-lines"><div><span>Especialidad principal</span><b>—</b></div><div><span>Herramientas y tecnologías</span><b>—</b></div><div><span>Idiomas</span><b>—</b></div><div><span>Logros destacables</span><b>—</b></div></div><p>Estos campos se activarán cuando estén respaldados por datos reales.</p></aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section work-section" id="proyectos" aria-labelledby="projectsTitle">
+      <div class="container">
+        <div class="section-heading reveal"><div><p class="section-number">03 / 04 — PROYECTOS</p><h2 id="projectsTitle">El trabajo <em>habla.</em></h2></div><p>Un espacio visual para explicar retos, decisiones, contribuciones y resultados. Las siguientes son plantillas, no proyectos atribuidos a Melisa.</p></div>
+        <div class="work-grid">
+          <article class="work-card work-card-large reveal">
+            <div class="work-art art-one" aria-hidden="true"><div class="art-portal"><div class="art-portal-top"><i></i><i></i><i></i></div><div class="art-portal-body"><div class="art-gradient-box"></div><div class="art-line long"></div><div class="art-line"></div><div class="art-square-row"><b></b><b></b><b></b></div></div></div><span class="art-orbit">✳</span></div>
+            <div class="work-info"><span class="subtle-label">CASO 01 / PLANTILLA</span><div class="work-title-row"><h3>Un proyecto que merece contarse.</h3><button class="round-button case-button" type="button" data-case="01" aria-label="Ver ficha del primer proyecto">↗</button></div><p>Se añadirá un caso real con contexto, participación y resultados confirmados.</p><div class="work-tags"><span>Proyecto por documentar</span></div></div>
+          </article>
+          <article class="work-card reveal">
+            <div class="work-art art-two" aria-hidden="true"><div class="art-mobile"><div class="art-mobile-notch"></div><span class="art-mobile-circle">✦</span><div class="art-mobile-text"></div><div class="art-mobile-text short"></div><div class="art-mobile-tile"></div></div><div class="float-pill">DETAILS MATTER ✧</div></div>
+            <div class="work-info"><span class="subtle-label">CASO 02 / PLANTILLA</span><div class="work-title-row"><h3>Ideas llevadas a la práctica.</h3><button class="round-button case-button" type="button" data-case="02" aria-label="Ver ficha del segundo proyecto">↗</button></div><p>Un futuro espacio para demostrar proceso y aportaciones reales.</p><div class="work-tags"><span>Proyecto por documentar</span></div></div>
+          </article>
+          <article class="work-card reveal">
+            <div class="work-art art-three" aria-hidden="true"><div class="cluster"><span class="cluster-a">✳</span><span class="cluster-b">M</span><span class="cluster-c">◇</span><span class="cluster-d">↗</span></div></div>
+            <div class="work-info"><span class="subtle-label">CASO 03 / PLANTILLA</span><div class="work-title-row"><h3>Lo que sigue también importa.</h3><button class="round-button case-button" type="button" data-case="03" aria-label="Ver ficha del tercer proyecto">↗</button></div><p>Una vitrina para resultados, aprendizajes o trabajo destacado.</p><div class="work-tags"><span>Proyecto por documentar</span></div></div>
+          </article>
+        </div>
+        <p class="work-caption">✦ Visualizaciones conceptuales. No son fotografías ni interfaces de trabajos reales de Melisa.</p>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contacto" aria-labelledby="contactTitle">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div class="contact-grain"></div><span class="section-number">04 / 04 — SIGUIENTE CAPÍTULO</span>
+          <div class="contact-content"><h2 id="contactTitle">Las mejores historias empiezan con un <em>hola.</em></h2><p>Este será el punto de contacto profesional de Melisa. Por privacidad, todavía no mostramos correo, teléfono ni redes sin su autorización.</p><div class="contact-buttons"><a href="https://github.com/YurickIgnis/melisa_cv" target="_blank" rel="noopener noreferrer" class="button button-primary">Ver código del sitio ↗</a><button id="printFooter" type="button" class="button button-secondary">Guardar como PDF ↓</button></div><span class="contact-foot">MEDIOS PROFESIONALES PENDIENTES DE CONFIGURAR</span></div>
+          <div class="contact-glyph" aria-hidden="true">m.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container footer-content"><a href="#inicio" class="footer-logo">m<span>·</span></a><p>© <span id="year">2026</span> Melisa. Portafolio digital en preparación.</p><a href="#inicio" class="back-to-top">Volver al inicio ↑</a></div></footer>
+  <dialog id="caseDialog" class="case-dialog" aria-labelledby="caseTitle"><div class="case-modal"><button id="closeCase" type="button" class="modal-close" aria-label="Cerrar">✕</button><span class="subtle-label" id="caseNumber">CASO / PLANTILLA</span><h2 id="caseTitle">Proyecto por documentar</h2><p>Esta sección está preparada para incorporar un caso real: problema abordado, función de Melisa, decisiones, herramientas y resultados verificables. No representa un trabajo que se le atribuya actualmente.</p><div class="modal-field"><strong>Estado</strong><span>Pendiente de completar con información confirmada.</span></div></div></dialog>
+</body>
+</html>
