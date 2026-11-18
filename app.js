@@ -1,7 +1,7 @@
 (() => {
   "use strict";
   const translations = {
-    nav_about: "About", nav_work: "Experience", nav_education: "Education", nav_contact: "Contact",
+    nav_home: "Home", nav_about: "About me", nav_work: "Experience", nav_education: "Education", nav_contact: "Contact",
     eyebrow: "PROFESSIONAL PROFILE",
     headline: "Customer service <span class=\"role-divider\">&amp;</span><br>administrative support.",
     intro: "Bilingual professional with experience in customer service, document management and operations coordination in public institutions and private companies.",
