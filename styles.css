@@ -115,11 +115,13 @@ h1,h2,h3,p{margin-top:0}
       "lead lead"
       "links links";
     column-gap:14px;
-    row-gap:17px;
+    row-gap:clamp(14px,2.3svh,22px);
+    grid-template-rows:auto auto auto minmax(auto,1fr) auto;
     align-items:center;
-    min-height:0;
-    padding-top:36px;
-    padding-bottom:52px;
+    min-height:calc(100vh - 68px);
+    min-height:calc(100svh - 68px);
+    padding-top:clamp(26px,4.5svh,42px);
+    padding-bottom:clamp(22px,3.5svh,34px);
   }
   .hero-copy{display:contents}
   .hero .eyebrow{
@@ -176,6 +178,7 @@ h1,h2,h3,p{margin-top:0}
   }
   .hero-lead{
     grid-area:lead;
+    align-self:start;
     max-width:570px;
     margin:0;
     font-size:clamp(12.5px,3.3vw,15px);
@@ -183,7 +186,8 @@ h1,h2,h3,p{margin-top:0}
   }
   .hero-links{
     grid-area:links;
-    margin:5px 0 0;
+    align-self:end;
+    margin:0;
     gap:18px;
     align-items:center;
   }
@@ -196,13 +200,18 @@ h1,h2,h3,p{margin-top:0}
   .text-link{font-size:12px;white-space:nowrap}
 }
 @media screen and (max-width:370px){
-  .hero{column-gap:11px;row-gap:15px;padding-top:31px;padding-bottom:43px}
+  .hero{column-gap:11px;row-gap:14px;padding-top:26px;padding-bottom:22px}
   .hero h1{font-size:clamp(27px,8.6vw,32px)}
   .hero-links{gap:12px}
   .primary-link{padding:12px 12px;gap:10px;font-size:11px}
   .text-link{font-size:11px}
 }
 
+
+/* On short screens, allow natural scrolling instead of clipping hero content. */
+@media screen and (max-width:720px) and (max-height:640px){
+  .hero{row-gap:13px;padding-top:24px;padding-bottom:24px}
+}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 @page{size:A4;margin:13mm}
 @media print{body{background:white;color:black}.site-header,.hero-links,.photo-note,.photo-index,.highlights-wrap,.print-link,.site-footer{display:none!important}.shell{width:100%}.hero{min-height:auto;grid-template-columns:1fr 155px;padding:0 0 14mm;gap:15mm}.hero h1{font-size:43px;margin:10px 0}.hero-role{font-size:16px;margin:0 0 8px}.hero-lead{font-size:11px;line-height:1.45}.portrait-area{min-height:auto}.portrait-area:before{display:none}.photo-frame{width:150px;height:160px;border-radius:90px 90px 3px 3px}.section{padding:9mm 0}.profile-section{grid-template-columns:1fr;gap:5mm}.profile-body h2{font-size:23px;margin:5mm 0}.profile-body>p:last-child{font-size:10px;line-height:1.5}.section-heading{margin-bottom:4mm}.section-heading h2{font-size:24px;margin:4mm 0 0}.section-heading>p,.section-side,.small-caps{display:none}.experience-item{grid-template-columns:110px 1fr;gap:7mm;padding:4mm 0;break-inside:avoid}.experience-content h3{font-size:14px;margin:0 0 3mm}.experience-content ul{gap:1mm}.experience-content li{font-size:9px;line-height:1.35}.org{font-size:10px;margin-bottom:2mm}.date-column{font-size:9px}.date-column:after,.timeline-dot{display:none!important}.learning-grid{padding:4mm 0}.learning-main h3{font-size:17px;margin:3mm 0}.learning-secondary .skills-list li,.languages>div{font-size:10px;padding:1.6mm 0}.contact-section{background:white;padding:5mm 0;border-top:1px solid #aaa}.contact-inner{grid-template-columns:1fr 1fr}.contact-head h2{font-size:22px;margin:2mm 0}.contact-head>p:last-child{font-size:10px}.contact-link{padding:3mm 0}.contact-link strong{font-size:10px}}
