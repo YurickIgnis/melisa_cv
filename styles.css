@@ -221,6 +221,55 @@ h1,h2,h3,p{margin-top:0}
   .hero-links{margin-top:6px}
 }
 
+
+/* Unified mobile type scale: clear hierarchy, readable body copy and equal CTA lettering.
+   Scoped to screens so the desktop layout and printable version are untouched. */
+@media screen and (max-width:720px){
+  :root{
+    --mobile-body:15px;
+    --mobile-label:11px;
+    --mobile-action:14px;
+  }
+  .site-nav{font-size:14px}
+  .language-switch{font-size:12px}
+  .hero .eyebrow,
+  .small-caps,
+  .small-number,
+  .highlight .highlight-label{font-size:var(--mobile-label);line-height:1.45}
+  .hero h1{font-size:clamp(30px,8.05vw,40px);line-height:1.08}
+  .hero-role{font-size:clamp(20px,5.1vw,22px);line-height:1.36;font-weight:500}
+  .hero-lead{font-size:var(--mobile-body);line-height:1.65}
+  .hero-links .primary-link,
+  .hero-links .text-link{font-size:var(--mobile-action);line-height:1.35}
+  .hero-links .primary-link{padding:13px 15px;gap:11px}
+  .hero-links{gap:clamp(10px,3vw,16px)}
+  .highlight strong{font-size:17px;line-height:1.4}
+  .section-side p{font-size:14px}
+  .profile-body h2{font-size:clamp(34px,7.5vw,42px);line-height:1.2}
+  .profile-body>p:last-child,
+  .section-heading>p,
+  .experience-content li,
+  .university,
+  .skills-list li,
+  .contact-head>p:last-child{font-size:var(--mobile-body);line-height:1.7}
+  .section-heading h2,
+  .contact-head h2{font-size:clamp(36px,8vw,44px);line-height:1.16}
+  .experience-content h3{font-size:clamp(21px,5.5vw,24px);line-height:1.35}
+  .learning-main h3{font-size:clamp(23px,6vw,29px);line-height:1.3}
+  .date-column,.org,.degree-years{font-size:13px;line-height:1.5}
+  .languages>div{font-size:14px;line-height:1.5;gap:12px}
+  .contact-link>span:first-child{font-size:var(--mobile-label)}
+  .contact-link strong{font-size:15px;line-height:1.4}
+  .print-link{font-size:var(--mobile-action)}
+  .footer-inner span,.footer-inner a:last-child{font-size:12px;line-height:1.5}
+}
+@media screen and (max-width:370px){
+  :root{--mobile-body:14.5px;--mobile-action:13px}
+  .hero h1{font-size:clamp(28px,8.2vw,30px)}
+  .hero-links .primary-link{padding:12px 11px;gap:9px}
+  .hero-links{gap:10px}
+}
+
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 @page{size:A4;margin:13mm}
 @media print{body{background:white;color:black}.site-header,.hero-links,.photo-note,.photo-index,.highlights-wrap,.print-link,.site-footer{display:none!important}.shell{width:100%}.hero{min-height:auto;grid-template-columns:1fr 155px;padding:0 0 14mm;gap:15mm}.hero h1{font-size:43px;margin:10px 0}.hero-role{font-size:16px;margin:0 0 8px}.hero-lead{font-size:11px;line-height:1.45}.portrait-area{min-height:auto}.portrait-area:before{display:none}.photo-frame{width:150px;height:160px;border-radius:90px 90px 3px 3px}.section{padding:9mm 0}.profile-section{grid-template-columns:1fr;gap:5mm}.profile-body h2{font-size:23px;margin:5mm 0}.profile-body>p:last-child{font-size:10px;line-height:1.5}.section-heading{margin-bottom:4mm}.section-heading h2{font-size:24px;margin:4mm 0 0}.section-heading>p,.section-side,.small-caps{display:none}.experience-item{grid-template-columns:110px 1fr;gap:7mm;padding:4mm 0;break-inside:avoid}.experience-content h3{font-size:14px;margin:0 0 3mm}.experience-content ul{gap:1mm}.experience-content li{font-size:9px;line-height:1.35}.org{font-size:10px;margin-bottom:2mm}.date-column{font-size:9px}.date-column:after,.timeline-dot{display:none!important}.learning-grid{padding:4mm 0}.learning-main h3{font-size:17px;margin:3mm 0}.learning-secondary .skills-list li,.languages>div{font-size:10px;padding:1.6mm 0}.contact-section{background:white;padding:5mm 0;border-top:1px solid #aaa}.contact-inner{grid-template-columns:1fr 1fr}.contact-head h2{font-size:22px;margin:2mm 0}.contact-head>p:last-child{font-size:10px}.contact-link{padding:3mm 0}.contact-link strong{font-size:10px}}
